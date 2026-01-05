@@ -1,0 +1,80 @@
+# BUILD YOUR MOD AUTOMATICALLY WITH GITHUB (FREE)
+
+This is the EASIEST way to build your mod - let GitHub do it for you!
+
+## Step-by-Step Instructions
+
+### 1. Create a GitHub Account (Free)
+Go to https://github.com and sign up (it's free!)
+
+### 2. Create a New Repository
+- Click the "+" button in the top right
+- Select "New repository"
+- Name it: `minecraft-autoclicker`
+- Make it Public (required for free Actions)
+- Don't add README, .gitignore, or license
+- Click "Create repository"
+
+### 3. Upload Your Files
+On the repository page, you'll see "uploading an existing file"
+
+**Drag and drop ALL these files/folders:**
+- `.github` folder (with workflows inside)
+- `src` folder
+- `gradle` folder  
+- `build.gradle`
+- `gradlew`
+- `gradlew.bat`
+- All other files
+
+OR use the command line if you know Git:
+```bash
+git init
+git add .
+git commit -m "Initial commit"
+git branch -M main
+git remote add origin https://github.com/YOUR_USERNAME/minecraft-autoclicker.git
+git push -u origin main
+```
+
+### 4. GitHub Will Automatically Build It!
+- Go to the "Actions" tab in your repository
+- You'll see a workflow running
+- Wait 10-15 minutes for it to complete
+- It will show a green checkmark when done
+
+### 5. Download Your Mod
+- Click on the completed workflow run
+- Scroll down to "Artifacts"
+- Download "AutoClicker-Mod"
+- Inside the ZIP will be your `autoclicker-1.0.0.jar`!
+
+## That's It!
+
+GitHub's servers will build the mod for you with the correct Java version and memory settings. No more dealing with local build issues!
+
+## Troubleshooting
+
+**"Actions" tab doesn't show anything?**
+- Make sure the repository is Public (not Private)
+- Check that you uploaded the `.github` folder with the `workflows` folder inside it
+
+**Build failed on GitHub?**
+- Click on the failed run to see the error
+- Usually it's a missing file - make sure you uploaded everything
+
+**Can't find the Artifacts?**
+- Scroll all the way down on the completed workflow run page
+- The "Artifacts" section is at the bottom
+
+## Why This Works Better
+
+- ✅ Uses correct Java version (8)
+- ✅ Plenty of memory allocated
+- ✅ No local configuration needed
+- ✅ Build logs show exactly what went wrong if there's an issue
+- ✅ You can rebuild anytime by clicking "Re-run workflow"
+
+---
+
+**IMPORTANT:** Make sure you upload the entire folder structure, especially the `.github/workflows/` folder with the `build.yml` file inside it!
